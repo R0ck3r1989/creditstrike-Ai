@@ -3,7 +3,6 @@ package com.creditstrike.ai
 import android.app.Activity
 import android.os.Bundle
 import android.graphics.Typeface
-import android.view.Gravity
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.LinearLayout
@@ -57,7 +56,7 @@ class MainActivity : Activity() {
         addButton("Account investigations") { showInvestigations() }
         addButton("Research library") { showResearch() }
         addButton("Approval queue") { showApprovals() }
-        addText("Prototype notice: do not enter sensitive account numbers or upload real credit reports in this build. Authentication and secure storage are not yet implemented.", 14f, false)
+        addText("Prototype notice: do not enter sensitive account numbers or upload real credit reports. Authentication and secure storage are not implemented.", 14f, false)
     }
 
     private fun showInvestigations() {
@@ -93,7 +92,7 @@ class MainActivity : Activity() {
     private fun showApprovals() {
         base("Approval queue")
         addText("No external action can be sent from this prototype.", 18f, true)
-        addText("Production approval cards will show the proposed recipient, factual basis, supporting evidence, legal citations, expected effect, and deadline before you approve.", 16f, false)
+        addText("Production approval cards should show the proposed recipient, factual basis, supporting evidence, legal citations, expected effect, and deadline before approval.", 16f, false)
         addButton("Back to dashboard") { showHome() }
     }
 }
